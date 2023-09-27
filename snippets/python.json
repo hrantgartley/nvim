@@ -1,0 +1,7 @@
+{
+  "print": {
+    "prefix": "print",
+    "body": ["print(f\"$1\")"],
+    "description": "print with f-string"
+  }
+}

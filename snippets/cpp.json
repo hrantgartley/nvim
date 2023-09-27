@@ -1,0 +1,7 @@
+{
+  "inc": {
+    "prefix": "inc",
+    "body": ["#include <iostream>"],
+    "description": "input/output stream"
+  }
+}
