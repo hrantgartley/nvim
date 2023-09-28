@@ -9,6 +9,10 @@
       {
         "language": "php",
         "path": "./php.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./cpp.json"
       }
     ]
   }

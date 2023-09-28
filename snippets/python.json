@@ -3,5 +3,10 @@
     "prefix": "print",
     "body": ["print(f\"$1\")"],
     "description": "print with f-string"
+  },
+  "class": {
+    "prefix": "gront",
+    "body": ["class $1:", "\tdef __init__(self, $2):", "\t\t$3"],
+    "description": "class with init"
   }
 }
