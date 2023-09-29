@@ -30,6 +30,12 @@ vim.keymap.set(
 )
 
 vim.keymap.set("", "<leader>bt", ":GitBlameToggle<CR>", { noremap = true, silent = true, desc = "Toggle Git Blame" })
+vim.keymap.set(
+  "",
+  "<leader>rs",
+  ":RegexplainerToggle<CR>",
+  { noremap = true, silent = true, desc = "Regex Explainer Toggle" }
+)
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(
