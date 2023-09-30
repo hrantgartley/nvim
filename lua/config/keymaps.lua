@@ -36,6 +36,11 @@ vim.keymap.set(
   ":RegexplainerToggle<CR>",
   { noremap = true, silent = true, desc = "Regex Explainer Toggle" }
 )
+vim.api.nvim_create_user_command("S", function()
+  require("persistence").load()
+end, { nargs = 0 })
+
+vim.keymap.set("", "<leader>yA", ":%y<CR>", { noremap = true, silent = true, desc = "Copy Entire File" })
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(
