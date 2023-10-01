@@ -7,11 +7,11 @@ vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.swapfile = false
-
-require("notify").setup({
-  background_colour = "#FFFFFF",
-})
 vim.wo.cursorline = false
+
+-- require("notify").setup({
+--   background_colour = "#FFFFFF",
+-- })
 
 require("tokyonight").setup({
   transparent = true,
@@ -25,10 +25,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = true,
 })
 
-vim.api.nvim_create_user_command("S", function()
-  require("persistence").load()
-end, { nargs = 0 })
-
 local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 require("lspconfig").clangd.setup({
@@ -41,15 +37,6 @@ require("lspconfig").clangd.setup({
 })
 
 vim.cmd([[colorscheme tokyonight-night]])
-local null_ls = require("null-ls")
-null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.phpcsfixer,
-    null_ls.builtins.formatting.black.with({
-      extra_args = { "--line-length=120", "--skip-string-normalization" },
-    }),
-  },
-})
 
 require("neo-tree").setup({
   filesystem = {
@@ -79,17 +66,32 @@ rt.setup({
 })
 
 -- add clippy to rust-analyzer
-local lspconfig = require("lspconfig")
-lspconfig.rust_analyzer.setup({
-  -- add clippy to rust-analyzer
-  settings = {
-    ["rust-analyzer"] = {
-      checkOnSave = {
-        command = "clippy",
-      },
-    },
-  },
-})
+-- local lspconfig = require("lspconfig")
+-- lspconfig.rust_analyzer.setup({
+--   -- add clippy to rust-analyzer
+--   settings = {
+--     ["rust-analyzer"] = {
+--       assist = {
+--         importEnforceGranularity = true,
+--         importPrefix = "create",
+--       },
+--       cargo = { allFeatures = true },
+--       checkOnSave = {
+--         -- default: `cargo check`
+--         command = "clippy",
+--         allFeatures = true,
+--       },
+--       inlayHints = {
+--
+--         lifetimeElisionHints = {
+--           enable = true,
+--           useParameterNames = true,
+--         },
+--       },
+--     },
+--   },
+-- })
+
 --
 require("lspconfig").intelephense.setup({
   settings = {
