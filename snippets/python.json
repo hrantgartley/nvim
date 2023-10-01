@@ -8,5 +8,16 @@
     "prefix": "gront",
     "body": ["class $1:", "\tdef __init__(self, $2):", "\t\t$3"],
     "description": "class with init"
+  },
+  "starter": {
+    "prefix": "starter",
+    "body": [
+      "\n",
+      "def main():\n\tpass",
+      "\n",
+      "if __name__ == \"__main__\":",
+      "\tmain()"
+    ],
+    "description": "starter file"
   }
 }
