@@ -15,12 +15,6 @@ end, { nargs = 0 })
 vim.keymap.set("", "<M-\\>", ":CopilotToggle<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("", "<leader>yc", ":YankyClearHistory<CR>", { noremap = true, silent = true })
-vim.keymap.set(
-  "",
-  "<leader>ri",
-  ":MasonInstall rust-analyzer<CR>",
-  { noremap = true, silent = true, desc = "Rust install cause gay" }
-)
 
 vim.keymap.set("", "<leader>bt", ":GitBlameToggle<CR>", { noremap = true, silent = true, desc = "Toggle Git Blame" })
 vim.keymap.set(

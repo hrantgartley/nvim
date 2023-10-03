@@ -60,7 +60,7 @@ local rt = require("rust-tools")
 rt.setup({
   tools = {
     hover_actions = {
-      auto_focus = true,
+      auto_focus = false,
     },
   },
 })
@@ -106,3 +106,12 @@ require("lspconfig").intelephense.setup({
 -- })
 --
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
+
+local on_attach = function(client, bufnr)
+  -- Disable hover in favor of Pyright
+  client.server_capabilities.hoverProvider = false
+end
+
+require("lspconfig").ruff_lsp.setup({
+  on_attach = on_attach,
+})
