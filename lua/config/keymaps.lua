@@ -28,6 +28,8 @@ vim.api.nvim_create_user_command("S", function()
 end, { nargs = 0 })
 
 vim.keymap.set("", "<leader>yA", ":%y<CR>", { noremap = true, silent = true, desc = "Copy Entire File" })
+vim.keymap.set("", "<leader>rc", ":RunCode<CR>", { noremap = true, silent = true, desc = "Run Code" })
+vim.keymap.set("", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = true, desc = "Run File" })
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(

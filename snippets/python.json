@@ -19,5 +19,20 @@
       "\tmain()"
     ],
     "description": "starter file"
+  },
+  "floatInput": {
+    "prefix": "finput",
+    "body": ["float(input(\"$1\"))"],
+    "description": "float input"
+  },
+  "intInput": {
+    "prefix": "iinput",
+    "body": ["int(input(\"$1\"))"],
+    "description": "int input"
+  },
+  "stringInput": {
+    "prefix": "input",
+    "body": ["input(\"$1\")"],
+    "description": "string input"
   }
 }
