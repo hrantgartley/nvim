@@ -1,4 +1,3 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
@@ -19,6 +18,7 @@ require("tokyonight").setup({
     sidebars = "transparent",
     floats = "transparent",
   },
+  lazy = true,
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -34,11 +34,12 @@ require("lspconfig").clangd.setup({
     "clangd",
     "--offset-encoding=utf-16",
   },
+  lazy = true,
 })
 
 vim.cmd([[colorscheme tokyonight-night]])
 
-require("neo-tree").setup({
+--[[ require("neo-tree").setup({
   filesystem = {
     window = {
       mappings = {
@@ -53,8 +54,9 @@ require("neo-tree").setup({
         end
       end,
     },
+    lazy = true,
   },
-})
+}) ]]
 
 local rt = require("rust-tools")
 rt.setup({
@@ -63,6 +65,7 @@ rt.setup({
       auto_focus = false,
     },
   },
+  lazy = true,
 })
 
 -- add clippy to rust-analyzer
@@ -99,6 +102,7 @@ require("lspconfig").intelephense.setup({
       format = { braces = "k&r" },
     },
   },
+  lazy = true,
 })
 --
 -- require("lspconfig").html.setup({
@@ -114,4 +118,11 @@ end
 
 require("lspconfig").ruff_lsp.setup({
   on_attach = on_attach,
+  lazy = true,
 })
+
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+local cmp = require("cmp")
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
+vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
