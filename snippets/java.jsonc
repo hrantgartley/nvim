@@ -1,0 +1,12 @@
+{
+  "print": {
+    "prefix": "sysp",
+    "body": ["System.out.print($1);"],
+    "description": "Java print"
+  },
+  "printf": {
+    "prefix": "syspf",
+    "body": ["System.out.printf($1);"],
+    "description": "Java printf"
+  }
+}
