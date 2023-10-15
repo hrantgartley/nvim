@@ -7,7 +7,7 @@ vim.wo.relativenumber = true
 vim.wo.number = true
 vim.opt.swapfile = false
 vim.wo.cursorline = false
-
+vim.o.scrolloff = 2
 -- require("notify").setup({
 --   background_colour = "#FFFFFF",
 -- })
