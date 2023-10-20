@@ -33,8 +33,14 @@ vim.keymap.set("", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = true
 vim.keymap.set(
   "",
   "<leader>tt",
-  ":ToggleTerm<CR>",
+  ":ToggleTerm size=17<CR>",
   { noremap = true, silent = true, desc = "Toggle Floating Terminal" }
+)
+vim.keymap.set(
+  "",
+  "<leader>tb",
+  ":ToggleTerm size=30<CR>",
+  { noremap = true, silent = true, desc = "Toggle Big Terminal" }
 )
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
