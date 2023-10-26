@@ -42,6 +42,12 @@ vim.keymap.set(
   ":ToggleTerm size=30<CR>",
   { noremap = true, silent = true, desc = "Toggle Big Terminal" }
 )
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+  desc = "Disable New Line Comment",
+})
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(

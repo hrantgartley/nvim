@@ -13,7 +13,7 @@
     "prefix": "starter",
     "body": [
       "\n",
-      "def main():\n\tpass",
+      "def main():\n\t${pass}",
       "\n",
       "if __name__ == \"__main__\":",
       "\tmain()"

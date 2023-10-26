@@ -105,7 +105,7 @@ require("lspconfig").intelephense.setup({
   lazy = true,
 })
 
-require("lspconfig").emmet_language_server.setup({
+require("lspconfig").emmet_ls.setup({
   filetypes = { "html", "php" },
   lazy = true,
 })
