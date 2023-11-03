@@ -48,6 +48,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
   desc = "Disable New Line Comment",
 })
+
+vim.keymap.set(
+  "",
+  "<leader>ti",
+  ":ClangdToggleInlayHints<CR>",
+  { noremap = true, silent = true, desc = "Clangd Toggle Inlay Hints" }
+)
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(

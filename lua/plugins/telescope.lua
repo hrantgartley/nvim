@@ -9,6 +9,11 @@ return {
   },
   config = function()
     local telescope = require("telescope")
+    local conf = require("telescope.config").values
+
+    -- Modify vimgrep_arguments
+    table.insert(conf.vimgrep_arguments, "--fixed-strings")
+
     telescope.setup({
       pickers = {
         live_grep = {
