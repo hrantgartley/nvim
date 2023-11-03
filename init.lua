@@ -110,9 +110,6 @@ require("lspconfig").emmet_ls.setup({
   lazy = true,
 })
 --
--- require("lspconfig").html.setup({
---   filetypes = { "html", "php" },
--- })
 --
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
