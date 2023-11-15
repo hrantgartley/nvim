@@ -1,7 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-
+local Util = require("lazyvim.util")
 vim.api.nvim_create_user_command("CopilotToggle", function()
   vim.g.copilot_enabled = not vim.g.copilot_enabled
   if vim.g.copilot_enabled then
@@ -55,6 +55,23 @@ vim.keymap.set(
   ":ClangdToggleInlayHints<CR>",
   { noremap = true, silent = true, desc = "Clangd Toggle Inlay Hints" }
 )
+
+vim.keymap.set({ "n", "i" }, "<S-cr>", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
+
+vim.keymap.set(
+  "",
+  "<leader>ct",
+  ":ColorizerToggle<CR>",
+  { noremap = true, silent = true, desc = "Toggle CSS Colorizer" }
+)
+
+vim.keymap.set("n", "<leader>gG", function()
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazygit (root dir)" })
+vim.keymap.set("n", "<leader>gg", function()
+  Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazygit (cwd)" })
+
 -- add a keymap with leader y c to run the command yankyclear
 -- change keymap for copilot to <leader>nvim_create_user_command
 -- vim.api.nvim_set_keymap(

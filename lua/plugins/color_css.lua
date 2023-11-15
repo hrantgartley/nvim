@@ -1,3 +1,3 @@
 return {
-  "ap/vim-css-color",
+  "norcalli/nvim-colorizer.lua",
 }

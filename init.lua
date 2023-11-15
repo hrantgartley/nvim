@@ -106,6 +106,11 @@ require("lspconfig").intelephense.setup({
 })
 
 require("lspconfig").emmet_ls.setup({
+  filetypes = { "html", "php", "css" },
+  lazy = true,
+})
+
+require("lspconfig").html.setup({
   filetypes = { "html", "php" },
   lazy = true,
 })
