@@ -5,7 +5,7 @@
     "description": "Java print"
   },
   "printf": {
-    "prefix": "syspf",
+    "prefix": "sysf",
     "body": ["System.out.printf($1);"],
     "description": "Java printf"
   }
