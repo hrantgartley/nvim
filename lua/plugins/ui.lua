@@ -1,11 +1,17 @@
 return {
   {
+
+    -- disable other messages in an omit table
+    omit = {
+      "No information available",
+      "Highlight group 'NotifyBackground' has no background highlight Please provide an RGB hex value or highlight group with a background value for 'background_colour' option. This is the colour that will be used for 100% transparency.",
+    },
     "folke/noice.nvim",
     opts = function(_, opts)
       table.insert(opts.routes, {
         filter = {
           event = "notify",
-          find = "No information available",
+          find = omit,
         },
         opts = { skip = true },
       })
