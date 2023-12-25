@@ -3,14 +3,14 @@ require("config.lazy")
 --   background_colour = "#FFFFFF",
 -- })
 
-require("tokyonight").setup({
-  transparent = true,
-  styles = {
-    sidebars = "transparent",
-    floats = "transparent",
-  },
-  lazy = true,
-})
+-- require("tokyonight").setup({
+--   transparent = true,
+--   styles = {
+--     sidebars = "transparent",
+--     floats = "transparent",
+--   },
+--   lazy = true,
+-- })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   update_in_insert = true,
