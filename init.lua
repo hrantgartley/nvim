@@ -29,7 +29,7 @@ require("lspconfig").clangd.setup({
   lazy = true,
 })
 
-vim.cmd([[colorscheme vscode_modern]])
+vim.cmd([[colorscheme tokyonight-night]])
 
 --[[ require("neo-tree").setup({
   filesystem = {
