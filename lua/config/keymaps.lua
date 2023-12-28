@@ -27,6 +27,18 @@ vim.api.nvim_create_user_command("S", function()
   require("persistence").load()
 end, { nargs = 0 })
 
+vim.keymap.set(
+  "",
+  "<leader>tn",
+  ":colorscheme tokyonight-night<CR>",
+  { noremap = true, silent = true, desc = "Tokyo Night Dark Theme" }
+)
+vim.keymap.set(
+  "",
+  "<leader>yt",
+  ":colorscheme vscode_modern<CR>",
+  { noremap = true, silent = true, desc = "Vscode Modern Theme" }
+)
 vim.keymap.set("", "<leader>yA", ":%y<CR>", { noremap = true, silent = true, desc = "Copy Entire File" })
 vim.keymap.set("", "<leader>rc", ":RunCode<CR>", { noremap = true, silent = true, desc = "Run Code" })
 vim.keymap.set("", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = true, desc = "Run File" })
