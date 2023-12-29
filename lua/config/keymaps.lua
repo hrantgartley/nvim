@@ -39,6 +39,7 @@ vim.keymap.set(
   ":colorscheme vscode_modern<CR>",
   { noremap = true, silent = true, desc = "Vscode Modern Theme" }
 )
+vim.keymap.set("", "<leader>rr", ":LspRestart<CR>", { noremap = true, silent = true, desc = "Restart Current Lsp" })
 vim.keymap.set("", "<leader>yA", ":%y<CR>", { noremap = true, silent = true, desc = "Copy Entire File" })
 vim.keymap.set("", "<leader>rc", ":RunCode<CR>", { noremap = true, silent = true, desc = "Run Code" })
 vim.keymap.set("", "<leader>rf", ":RunFile<CR>", { noremap = true, silent = true, desc = "Run File" })
