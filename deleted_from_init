@@ -1,0 +1,72 @@
+--[[ require("neo-tree").setup({
+  filesystem = {
+    window = {
+      mappings = {
+        ["<leader>p"] = "image_wezterm", -- " or another map
+      },
+    },
+    commands = {
+      image_wezterm = function(state)
+        local node = state.tree:get_node()
+        if node.type == "file" then
+          require("image_preview").PreviewImage(node.path)
+        end
+      end,
+    },
+    lazy = true,
+  },
+}) ]]
+
+
+-- add clippy to rust-analyzer
+-- local lspconfig = require("lspconfig")
+-- lspconfig.rust_analyzer.setup({
+--   -- add clippy to rust-analyzer
+--   settings = {
+--     ["rust-analyzer"] = {
+--       assist = {
+--         importEnforceGranularity = true,
+--         importPrefix = "create",
+--       },
+--       cargo = { allFeatures = true },
+--       checkOnSave = {
+--         -- default: `cargo check`
+--         command = "clippy",
+--         allFeatures = true,
+--       },
+--       inlayHints = {
+--
+--         lifetimeElisionHints = {
+--           enable = true,
+--           useParameterNames = true,
+--         },
+--       },
+--     },
+--   },
+-- })
+
+--
+-- require("notify").setup({
+--   background_colour = "#FFFFFF",
+-- })
+
+-- require("tokyonight").setup({
+--   transparent = true,
+--   styles = {
+--     sidebars = "transparent",
+--     floats = "transparent",
+--   },
+--   lazy = true,
+-- })
+-- require("notify").setup({
+--   background_colour = "#FFFFFF",
+-- })
+
+-- require("tokyonight").setup({
+--   transparent = true,
+--   styles = {
+--     sidebars = "transparent",
+--     floats = "transparent",
+--   },
+--   lazy = true,
+-- })
