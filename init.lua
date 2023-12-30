@@ -70,6 +70,7 @@ require("lspconfig").html.setup({
 
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
 
+---@diagnostic disable-next-line: unused-local
 local on_attach = function(client, bufnr)
   client.server_capabilities.hoverProvider = false
 end

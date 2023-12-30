@@ -2,5 +2,10 @@
     "completion.autoRequire": false,
     "diagnostics.globals": [
         "transparent"
+    ],
+    "diagnostics.disable": [
+        "missing-fields",
+        "undefined-global",
+        "unused-function"
     ]
 }
