@@ -31,10 +31,24 @@ return {
       Value = "󱇇 Value", -- Emoji for values
       Variable = " Variable", -- Emoji for variables
     }
-    -- Set the emoji symbols for each completion kind
+    local diagnostics = {
+      Error = "😡",
+      Warn = " ",
+      Hint = " ",
+      Info = " ",
+    }
     opts.formatting = {
       format = function(entry, vim_item)
         vim_item.kind = kinds[vim_item.kind] or vim_item.kind
+
+        -- Ensure entry.source exists and has a name
+        if entry.source and entry.source.name then
+          local diag = diagnostics[entry.source.name]
+          if diag then
+            vim_item.menu = diag .. vim_item.menu
+          end
+        end
+
         return vim_item
       end,
     }
