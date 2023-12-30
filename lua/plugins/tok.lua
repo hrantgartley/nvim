@@ -12,6 +12,9 @@ return {
         highlights["@variable"] = {
           fg = "#FFFFFF",
         }
+        highlights["@comment"] = {
+          fg = "#FF0000",
+        }
       end,
     })
   end,

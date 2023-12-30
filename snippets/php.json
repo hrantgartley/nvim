@@ -15,5 +15,10 @@
       "</html>"
     ],
     "description": "Generate a basic HTML5 template"
+  },
+  "Isset": {
+    "prefix": "isset",
+    "body": ["if (isset($1)) {", "    $2", "}"],
+    "description": "Generate an isset statement"
   }
 }
