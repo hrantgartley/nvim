@@ -21,7 +21,7 @@ require("lspconfig").clangd.setup({
 local function set_color_scheme()
   local current_hour = tonumber(os.date("%H"))
 
-  if current_hour >= 6 and current_hour < 19 then
+  if current_hour >= 6 and current_hour < 18 then
     vim.cmd([[colorscheme tokyonight-day]])
   else
     vim.cmd([[colorscheme tokyonight-night]])
