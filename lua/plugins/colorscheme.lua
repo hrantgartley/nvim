@@ -47,4 +47,9 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "akinsho/horizon.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 }
