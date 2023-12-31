@@ -21,10 +21,12 @@ require("lspconfig").clangd.setup({
 local function set_color_scheme()
   local current_hour = tonumber(os.date("%H"))
 
-  if current_hour >= 6 and current_hour < 18 then
+  if current_hour >= 5.5 and current_hour < 18 then
     vim.cmd([[colorscheme tokyonight-day]])
+    vim.cmd([[echomsg "Day mode activated"]])
   else
     vim.cmd([[colorscheme tokyonight-night]])
+    vim.cmd([[echomsg "Night mode activated"]])
   end
 end
 
@@ -60,11 +62,6 @@ require("lspconfig").intelephense.setup({
 
 require("lspconfig").emmet_ls.setup({
   filetypes = { "html", "php", "css" },
-  lazy = true,
-})
-
-require("lspconfig").html.setup({
-  filetypes = { "html", "php" },
   lazy = true,
 })
 
