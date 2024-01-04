@@ -17,28 +17,6 @@ require("lspconfig").clangd.setup({
   lazy = true,
 })
 
--- Function to check and set the color scheme based on the time
--- local function set_color_scheme()
---   local current_hour = tonumber(os.date("%H"))
---
---   if current_hour >= 5.5 and current_hour < 18 then
---     vim.cmd([[colorscheme tokyonight-day]])
---   else
---     vim.cmd([[colorscheme tokyonight-night]])
---   end
--- end
---
--- -- Schedule to check and set color scheme periodically
--- local timer = vim.loop.new_timer()
--- timer:start(
---   0,
---   60000,
---   vim.schedule_wrap(function()
---     set_color_scheme()
---   end)
--- )
--- set_color_scheme()
-
 local rt = require("rust-tools")
 rt.setup({
   tools = {
