@@ -1,3 +1,7 @@
+vim.api.nvim_set_hl(0, "CmpItemKindSnippet", { fg = "#89CFF0" })
+vim.api.nvim_set_hl(0, "CmpItemKindVariable", { fg = "#FF69B4" })
+vim.api.nvim_set_hl(0, "CmpItemKindField", { fg = "#FF0000" })
+vim.api.nvim_set_hl(0, "CmpItemKindFunction", { fg = "#FF0000" })
 return {
   "hrsh7th/nvim-cmp",
   dependencies = { "hrsh7th/cmp-emoji" },
@@ -41,7 +45,6 @@ return {
       format = function(entry, vim_item)
         vim_item.kind = kinds[vim_item.kind] or vim_item.kind
 
-        -- Ensure entry.source exists and has a name
         if entry.source and entry.source.name then
           local diag = diagnostics[entry.source.name]
           if diag then
@@ -53,7 +56,6 @@ return {
       end,
     }
 
-    -- Add emoji completion source
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
       { name = "emoji" },
     }))
