@@ -17,7 +17,8 @@ require("lspconfig").clangd.setup({
   lazy = true,
 })
 
--- Function to check and set the color scheme based on the time
+-- Function to check and set the color scheme based on the
+-- current time of day
 local function set_color_scheme()
   local current_hour = tonumber(os.date("%H"))
 
@@ -63,7 +64,7 @@ require("lspconfig").emmet_ls.setup({
   lazy = true,
 })
 
-require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/snippets" })
+require("luasnip.loaders.from_vscode").lazy_load({ paths = "./snippets/" })
 
 ---@diagnostic disable-next-line: unused-local
 local on_attach = function(client, bufnr)
