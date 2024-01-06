@@ -52,4 +52,9 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+  },
 }
