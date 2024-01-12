@@ -1,0 +1,7 @@
+{
+  "print": {
+    "prefix": "clog",
+    "body": ["console.log(\"$1\")"],
+    "description": "Better console.log snippet"
+  }
+}

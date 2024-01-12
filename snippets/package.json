@@ -17,6 +17,10 @@
       {
         "language": "java",
         "path": "./java.jsonc"
+      },
+      {
+        "language": "javascript",
+        "path": "./javascript.json"
       }
     ]
   }
