@@ -40,6 +40,14 @@ require("lspconfig").emmet_ls.setup({
   lazy = true,
 })
 
+require("lspconfig").cssls.setup({
+  filetypes = { "html", "css" },
+  lazy = true,
+})
+
+require("lspconfig").lua_ls.setup({
+  hints = true,
+})
 require("luasnip.loaders.from_vscode").lazy_load({ paths = "./snippets/" })
 
 ---@diagnostic disable-next-line: unused-local
@@ -50,5 +58,4 @@ end
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
-vim.opt.guicursor = ""
+vim.cmd([[colorscheme tokyonight-night]])
