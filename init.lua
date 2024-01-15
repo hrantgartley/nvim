@@ -16,15 +16,15 @@ require("lspconfig").clangd.setup({
   },
   lazy = true,
 })
-local rt = require("rust-tools")
-rt.setup({
+-- local rt = require("rust-tools")
+--[[ rt.setup({
   tools = {
     hover_actions = {
       auto_focus = false,
     },
   },
   lazy = true,
-})
+}) ]]
 
 require("lspconfig").intelephense.setup({
   settings = {
