@@ -1,6 +1,5 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-
 -- This table will hold the configuration.
 local config = {}
 local act = wezterm.action
@@ -12,7 +11,6 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-
 config.default_domain = "WSL:Debian"
 -- config.default_prog = { "powershell.exe" }
 -- For example, changing the color scheme:
@@ -38,10 +36,13 @@ config.window_padding = {
   bottom = 0,
 }
 
+config.initial_cols = 60
+config.initial_rows = 20
 -- sets cursor to white
 config.colors = {
   cursor_border = "#e1e2e7",
   cursor_bg = "#e1e2e7",
+  cursor_fg = "#1a1b26",
 }
 config.keys = {
   -- This will create a new split and run your default program inside it
