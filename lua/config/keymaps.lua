@@ -52,7 +52,7 @@ vim.keymap.set(
 vim.keymap.set(
   "",
   "<leader>tb",
-  ":ToggleTerm size=30<CR>",
+  ":ToggleTerm direction=float size=30<CR>",
   { noremap = true, silent = true, desc = "Toggle Big Terminal" }
 )
 vim.api.nvim_create_autocmd("BufEnter", {

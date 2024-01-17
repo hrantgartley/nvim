@@ -1,3 +1,4 @@
+---@diagnostic disable: unused-local
 require("config.lazy")
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -16,15 +17,15 @@ require("lspconfig").clangd.setup({
   },
   lazy = true,
 })
--- local rt = require("rust-tools")
---[[ rt.setup({
+local rt = require("rust-tools")
+rt.setup({
   tools = {
     hover_actions = {
       auto_focus = false,
     },
   },
   lazy = true,
-}) ]]
+})
 
 require("lspconfig").intelephense.setup({
   settings = {
@@ -59,3 +60,9 @@ local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 vim.cmd([[colorscheme tokyonight-night]])
+
+on_attach = function(client, bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.lsp.buf.inlay_hint(bufnr, true)
+  end
+end
