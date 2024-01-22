@@ -95,3 +95,4 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 vim.keymap.set("", "<c-a>", "ggVG", { noremap = true, silent = true, desc = "Select All" })
+vim.keymap.set("", "<leader>sp", "!spt", { noremap = true, silent = true, desc = "Spotify TUi" })
