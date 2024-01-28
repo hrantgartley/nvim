@@ -41,11 +41,6 @@ require("lspconfig").emmet_ls.setup({
   lazy = true,
 })
 
-require("lspconfig").cssls.setup({
-  filetypes = { "html", "css" },
-  lazy = true,
-})
-
 require("lspconfig").lua_ls.setup({
   hints = true,
 })

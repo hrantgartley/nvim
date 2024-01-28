@@ -85,14 +85,10 @@ vim.keymap.set("n", "<leader>gg", function()
   Util.terminal({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Lazygit (cwd)" })
 
--- add a keymap with leader y c to run the command yankyclear
--- change keymap for copilot to <leader>nvim_create_user_command
--- vim.api.nvim_set_keymap(
---  "n",--  "<leader>cc",
---
 -- move lines (idk how to explain try it)
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 
 vim.keymap.set("", "<c-a>", "ggVG", { noremap = true, silent = true, desc = "Select All" })
-vim.keymap.set("", "<leader>sp", "!spt", { noremap = true, silent = true, desc = "Spotify TUi" })
+vim.keymap.set("", "<leader>sp", ":! spt<cr>", { noremap = true, silent = true, desc = "Spotify TUi" })
+vim.keymap.set("", "<leader>e", ":Neotree position=right toggle<cr>", { noremap = true, silent = true })
