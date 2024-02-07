@@ -13,6 +13,7 @@ vim.wo.number = true
 vim.wo.cursorline = false -- No line showing for current line
 vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
 vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
+-- vim.o.mouse = ""
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.scrolloff = 2
 -- vim.o.colorcolumn = "110"
